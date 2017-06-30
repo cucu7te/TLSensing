@@ -1,0 +1,44 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-md-2">Stats for last {{ n_measures }} measures</th>
+        <th>Max value </th>
+        <th>Min value </th>
+        <th>Average value </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for stat in data %}
+      <tr>
+        <th class="vert-align">{{ stat.measure_type | safe }}</th>
+        <td>
+          {% if stat.max %}
+            {{ stat.max.value }}<br/>
+            <em>
+              {{ stat.max.mote }}<br/>
+              {{ stat.max.date }}
+            </em>
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <td>
+          {% if stat.min %}
+            {{ stat.min.value }}<br/>
+            <em>
+              {{ stat.min.mote }}<br/>
+              {{ stat.min.date }}
+            </em>
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <td>
+          {% if stat.avg %} {{ stat.avg }} {% else %} - {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

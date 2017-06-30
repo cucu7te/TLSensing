@@ -1,0 +1,6 @@
+
+[lxml]
+lxml
+
+[png]
+cairosvg

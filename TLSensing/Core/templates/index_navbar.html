@@ -1,0 +1,49 @@
+{% load app_filters %}
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="100">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">TLSensing</a> 
+  </div>
+  <div class="collapse navbar-collapse" id="main-navbar">
+    {% if motes %}
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Motes<span class="caret"></span></span></a>
+        <ul class="dropdown-menu">
+          {% for mote in motes %}
+          <li><a href="#{{ mote.id }}">{{ mote.alias_name }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>                
+    </ul>
+    {% endif %}
+    <ul class="nav navbar-nav navbar-right">
+	<li id="welcome_msg" style="display:none; color:428bca"><a >Placeholder_name</a></li> 
+      <li id="login_nav" style="display:block"><a href="#" data-toggle="modal" data-target="#autenticazione" onclick="showLoginForm()" >Login</a></li> 
+        <li id="admin_nav" style="display:none"><a href="/admin" >Administration panel</a></li>
+        {% if motes %}
+        <li class="avo-link"><a href="#" onclick='ajaxRequest("GET", "/run/avo/", {}, "");'>Acquire Values</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#topologia" onclick="showImageMotes()">Topology</a></li>
+<li id="logout_nav" style="display:none"><a href="#" data-toggle="modal" onclick="logout()" >Logout</a></li> 
+        {% endif %}
+    </ul>
+
+<script type="text/javascript"> 
+if(isLogged()==true){
+  document.getElementById("logout_nav").style.display="block";
+  document.getElementById("login_nav").style.display="none";
+  document.getElementById("admin_nav").style.display="block";
+}
+else{
+  document.getElementById("logout_nav").style.display="none";
+  document.getElementById("login_nav").style.display="block";
+  document.getElementById("admin_nav").style.display="none";
+} </script>
+
+  </div>
+</nav>

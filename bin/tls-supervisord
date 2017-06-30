@@ -1,0 +1,2 @@
+#!/bin/sh
+tls-supervisord-bin -c $VIRTUAL_ENV/etc/supervisor/supervisord.conf $1 $2 $3

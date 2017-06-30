@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Measure</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for notif in notifications %}
+      <tr>
+        <th>{{ notif.date }}</th>
+        <td>{{ notif.not_type }}</td>
+        <td>{{ notif.measure }}</td>
+        <td>{{ notif.message }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

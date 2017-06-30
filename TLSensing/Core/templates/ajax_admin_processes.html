@@ -1,0 +1,67 @@
+<script type='text/javascript' src="{{ STATIC_URL }}js/script_mg.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".start").on('click', function() {
+            ajaxRequest("POST", "/admin/supervisor/start", {process: $(this).attr('class').split(" ")[1].substring(8)}, "#content");
+        });
+        $(".restart").on('click', function() {
+            ajaxRequest("POST", "/admin/supervisor/restart", {process: $(this).attr('class').split(" ")[1].substring(8)}, "#content");
+        });
+        $(".stop").on('click', function() {
+            ajaxRequest("POST", "/admin/supervisor/stop", {process: $(this).attr('class').split(" ")[1].substring(8)}, "#content");
+        });
+
+        {% if result.message %}
+        toastr["info"]("{{ result.message }}")
+        {% endif %}
+    });
+</script>
+<!--
+<p>{% now "d M Y H:m:s" %}</p>
+<h2>Action Result: {{ result.status }}</h2>
+<h2>Action Result String: {{ result.message }}</h2>
+-->
+{% if data %}
+<div id="supervisor">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Processes</h3>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for process in data %}
+                        {% if not process.hide %}
+                        <tr>
+                            <th>{{ process.human_name }}</th>
+                            <th>{{ process.statename }}</th>
+                            <th>{{ process.description }}</th>
+                            <th>
+                            {% if process.statename == "STOPPED" or process.statename == "EXITED" %}
+                            <button type="button" class="start process_{{ process.name }} btn btn-primary">Start</button>
+                            {% else %}
+                            <button type="button" class="restart process_{{ process.name }} btn btn-primary">Restart</button>
+                            <button type="button" class="stop process_{{ process.name }} btn btn-primary">Stop</button>
+                            {% endif %}
+                            </th>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% else %}
+<h1>{% if error %}{{ error }}{% else %}Unknown error{% endif %}</h1>
+{% endif %}
+</div>

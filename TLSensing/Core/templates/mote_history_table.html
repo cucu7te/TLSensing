@@ -1,0 +1,26 @@
+{% if measures %}
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        {% for mt in measure_types %}      
+        <th>{{ mt.label | safe }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for meas in measures %}
+      <tr>
+        <th>{{ meas.date }}</th>
+        {% for mt in measure_types %}
+        <td>{{ meas | get_item:mt.field | default_if_none:"-" }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="text-center"><h3>No measures</h3></div>
+{% endif %}

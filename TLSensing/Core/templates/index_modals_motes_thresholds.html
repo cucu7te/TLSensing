@@ -1,0 +1,116 @@
+{% load app_filters %}
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $("#save-thresholds-{{ mote.id }}").click(function() {
+      var thresholds = parseForm("thresholds","{{ mote.id }}");
+      thresholds.forEach(function(obj) { 
+        if(obj.key.match(/val$/) != null) {
+          if(isNaN(obj.val)) { 
+            alert("All threshold values must be integers"); 
+            return;
+          } 
+        } 
+      });
+
+      ajaxRequest("POST", "/data/thresholds/{{mote.id}}", thresholds, "#res-thresholds-{{mote.id}}", function() {
+        notify(JSON.parse($("#res-thresholds-{{mote.id}}").text())._msg, false);
+      });
+    });
+
+    $("#reset-thresholds-{{mote.id}}").click(function() {
+      var thresholds = {"__reset": true}
+
+      ajaxRequest("POST", "/data/thresholds/{{mote.id}}", thresholds, "#res-thresholds-{{mote.id}}", function() {
+        var data = JSON.parse($("#res-thresholds-{{mote.id}}").text())
+        console.log(JSON.stringify(data))
+        for (var mt in data) {
+          if(mt != "_msg"){
+            for (var tt in data[mt]) {
+              $("#input-{{mote.id}}-"+ tt + "-" + mt + "-msg").val(data[mt][tt]["msg"]);
+              $("#input-{{mote.id}}-"+ tt + "-" + mt + "-val").val(data[mt][tt]["val"]);
+            }
+          }
+        }
+        notify(data._msg, false);
+      });
+    });
+  });
+</script>
+<div class="modal fade" id="thresholds-{{mote.id}}" tabindex="-1" role="dialog" aria-labelledby="modal-thresholds-{{mote.id}}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modal-thresholds-{{mote.id}}">
+          Set thresholds for mote {{mote.alias_name}}
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="res-thresholds-{{mote.id}}" style="display: none;"></div>
+        <ul class="nav nav-pills nav-justified">
+          <li class="active"><a data-toggle="tab" href="#threshold-values-{{mote.id}}">Values</a></li>
+          <li><a data-toggle="tab" href="#threshold-messages-{{mote.id}}">Messages</a></li>
+        </ul>
+
+        <form class="form-horizontal">
+          {% csrf_token %}
+          <div class="scrollable">
+            <div class="tab-content">
+              <div id="threshold-values-{{mote.id}}" class="tab-pane fade in active" style="margin-top:5px;">
+                {% for threshold in mote.thresholds %}
+                <div class="panel panel-default">
+                  <div class="panel-heading">{{ measure_types | lookup_field:threshold | get_item:"onelinerlabel" | safe }}</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">Max</span>
+                          <input type="text" class="form-control" id="input-{{mote.id}}-max-{{threshold}}-val" value="{{ mote.thresholds | get_item:threshold | get_item:"max" | get_item:"val" }}"></input>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">Min</span>
+                          <input type="text" class="form-control" id="input-{{mote.id}}-min-{{threshold}}-val" value="{{ mote.thresholds | get_item:threshold | get_item:"min" | get_item:"val" }}"></input>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <div id="threshold-messages-{{mote.id}}" class="tab-pane fade" style="margin-top:5px;">
+                {% for threshold in mote.thresholds %}
+                <div class="panel panel-default">
+                  <div class="panel-heading">{{ measure_types | lookup_field:threshold | get_item:"onelinerlabel" | safe }}</div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <span class="input-group-addon">Max</span>
+                          <input type="text" class="form-control" id="input-{{mote.id}}-max-{{threshold}}-msg" value="{{ mote.thresholds | get_item:threshold | get_item:"max" | get_item:"msg" }}"></input>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <span class="input-group-addon">Min</span>
+                          <input type="text" class="form-control" id="input-{{mote.id}}-min-{{threshold}}-msg" value="{{ mote.thresholds | get_item:threshold | get_item:"min" | get_item:"msg" }}"></input>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </form>
+        <div id="res-{{mote.id}}"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="reset-thresholds-{{mote.id}}">Reset</button>
+        <button type="button" class="btn btn-primary" id="save-thresholds-{{mote.id}}">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: prettyplotlib
+Version: 0.1.7
+Summary: Painlessly create beautiful default `matplotlib` plots.
+Home-page: http://olgabot.github.io/prettyplotlib
+Author: Olga B. Botvinnik
+Author-email: olga.botvinnik@gmail.com
+License: MIT License
+Description: prettyplotlib
+        =============
+        
+        Python matplotlib-enhancer library which painlessly creates beautiful
+        default matplotlib plots. Inspired by Edward
+        Tufte's work on information
+        design and Cynthia Brewer's
+        work on color perception.
+        
+        I truly believe that scientific progress is impeded when improper data
+        visualizations are used. I spent a lot of time tweaking my figures to
+        make them more understandable, and realized the scientific world could
+        be a better place if the default parameters for plotting libraries
+        followed recent advances in information design research. And thus prettyplotlib was born.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Scientific/Engineering

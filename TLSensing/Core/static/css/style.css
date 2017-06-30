@@ -1,0 +1,139 @@
+.container{
+	width: 92%;
+  margin: 0 auto;
+}
+
+.modal {
+  z-index: 1000000000000;
+}
+
+#logos {
+  margin: 2%;
+}
+
+.table-responsive table td {
+  text-align: center;
+}
+
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
+
+.headers-right tbody th, .headers-right tbody th, .headers-right thead th {
+    text-align: right;
+}
+
+li.acquiring a {
+  pointer-events:none;
+}
+
+li.acquiring a::after {
+  content: " (currently acquiring)";
+}
+
+.svgchart svg {
+    width: 100%;
+    height: auto;
+}
+
+a:visited{
+	text-decoration: None
+}
+
+.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.input-group-addon { min-width: 60px; } // Or whatever width you want
+
+.input-group { width: 100%; }
+
+th {text-align: center;}
+
+.left{
+	float: left;
+  margin: 3px;
+}
+
+.btn-motes {
+  margin:3px;
+  font-weight: 900;
+  font-size: XSmall;
+}
+
+.btn-right{
+	margin:3px;
+	float:right;
+}
+
+.hvr-icon-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-icon-grow:before {
+  content: "+";
+  font-weight: 900;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-grow:hover:before, .hvr-icon-grow:focus:before, .hvr-icon-grow:active:before {
+  -webkit-transform: scale(1.3) translateZ(0);
+  transform: scale(1.3) translateZ(0);
+}
+
+
+.motes_text{
+  margin: 5px;
+  text-align: center;
+}
+
+.mote_div {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+}
+
+nav.affix {
+  top: 0;
+  width: 100%;
+  z-index: 1000000000; /* Well, that escalated quickly */
+}
+
+#top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+#top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px; /* height of link element */
+    left: 10px; /* padding from the left side of the window */
+}

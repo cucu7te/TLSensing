@@ -1,0 +1,10 @@
+#!/bin/bash
+# Author: Gianfranco Micoli <micoli.gianfranco@gmail.com>
+# This script starts TLSensing by running its supervisor daemon
+
+# The following variable should be modified by the bootstrapping script.
+# If that didn't happen, please modify it by hand
+TLSENV_PATH=/home/tlsensing/TLSEnv
+
+source $TLSENV_PATH/bin/activate
+$VIRTUAL_ENV/bin/tls-supervisord

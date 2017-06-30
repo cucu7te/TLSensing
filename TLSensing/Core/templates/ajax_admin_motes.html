@@ -1,0 +1,115 @@
+<!-- JS Common functions -->
+<script type='text/javascript' src='{{ STATIC_URL }}js/script_mg.js'></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".removemote").on('click', function() {
+            ajaxRequest("POST", "/admin/motes/remove", {alias_name: $(this).attr('class').split(" ")[3].substring(6), backup: true}, "#content");
+        });
+        $(".removemote_nobck").on('click', function() {
+            ajaxRequest("POST", "/admin/motes/remove", {alias_name: $(this).attr('class').split(" ")[3].substring(6), backup: false}, "#content");
+        });
+        $(".remove_values").on('click', function() {
+            //alert("TBD");
+            ajaxRequest("POST", "/admin/motes/remove_data", {alias_name: $(this).attr('class').split(" ")[3].substring(6)}, "#content");
+        });
+
+        $("#addmote").submit(function(e) {
+            e.preventDefault();
+            var ipv6 = $("#ipv6").val();
+            var alias_name = $("#alias_name").val();
+            var mote_type = $("#mote_type").val();
+            if(ipv6 == "" || alias_name == "") {
+                toastr["error"]("Please fill all the required fields before submitting")
+            } else {
+                ajaxRequest("POST", "/admin/motes/add", {ipv6: ipv6 , alias_name: alias_name, mote_type: mote_type}, "#content");
+            }
+        });
+
+        {% if result.message %}
+        toastr["{{ result.status }}"]("{{ result.message }}")
+        {% endif %}
+    });
+</script>
+<!--
+<h2>Action Result: {{ result.status }}</h2>
+<h2>Action Result String: {{ result.message }}</h2>
+-->
+
+    <div id="motes">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Mote</h3>
+            </div>
+            <form id="addmote" method="POST" class="form-horizontal"> {% csrf_token %}
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="ipv6" class="col-sm-2 control-label">IPv6 Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="ipv6" class="form-control" placeholder="IPv6 Address" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alias_name" class="col-sm-2 control-label">Alias Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="alias_name" class="form-control" placeholder="Mote Alias" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mote_type" class="col-sm-2 control-label">Mote Type</label>
+                        <div class="col-sm-10">
+                            <select id="mote_type" class="form-control">
+                                <option>OpenMote</option>
+                                <option>TelosB</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <input type="submit" class="btn btn-primary" value="Add" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    {% if data %}
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Remove Motes</h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>IPv6</th>
+                            <th>Alias</th>
+                            <th>Mote Type</th>
+                            <th>No. measures</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mote in data %}
+                        <tr>
+                            <td>{{ mote.ipv6 }}</td>
+                            <td>{{ mote.alias_name }}</td>
+                            <td>{{ mote.mote_type }}</td>
+                            <td>{{ mote.measures | length }}</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-primary removemote alias_{{ mote.alias_name }}" type="button">Delete</button>
+                                    <button class="btn btn-primary removemote_nobck alias_{{ mote.alias_name }}" type="button">Delete (don't backup)</button>
+                                    <button class="btn btn-danger remove_values alias_{{ mote.alias_name }}" type="button">Delete all acquired measures</button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>

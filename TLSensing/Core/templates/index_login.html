@@ -1,0 +1,57 @@
+<div class="modal fade" id="autenticazione" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <script type="text/javascript" src="/static/js/admin_login.js"> </script>
+     	
+
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Administrator Login</h4>
+      </div>
+      <div class="modal-body">
+
+        <!--<form action="/action_page.php">-->
+
+          <div id="img box" class="text-center" style="display:block">
+
+            <img id="login img"  src="/static/images/logo.png" alt="TLSensing logo" width="45%" height="45%" style="display:block; margin-left: auto; margin-right: auto" align="middle"> </img>
+
+          </div>
+		 <l id="admin label" style="font-size:16px; display:none" ><b>New password setup </b></l>
+     		 <!--<div class="container">   -->
+      		 </br><bb id="login info">Type the TLSensing main password to gain administrator's privileges.</br> </br></bb>
+     		 <l id="old_password_label" style="display:none" >Enter old password:</l>
+   		 <input id="old_password_field" style="display:none" type="password" placeholder="Old Password" name="old_psw" required>
+   		 <l id="new_password_label_1" style="display:none" >Enter new password:</l>
+  		 <input id="new_password_field_1" style="display:none" type="password" placeholder="New Password" name="new_psw" required>
+  		 <l id="new_password_label_2" style="display:none" >Confirm password:</l>
+		 <input id="new_password_field_2" style="display:none" type="password" placeholder="Confirm Password" name="confirm_psw" required>
+		 <bb id="error" style="display:none; color:red">ERROR:</br>No match between the entered passwords.</bb>
+              <!--<label style="font-size:20px" ><b>Password</b></label> </br> -->
+		 <input id="password_field" type="password" placeholder="Enter Password" style="float:left" name="psw" required >
+
+		 <button id="login button"class="btn btn-primary" onclick="logIn();" style="float:left">Login</button>
+<bb id="wrongpwd" style="display:none; color:red"></br></br>Wrong password!</bb>
+</br></br>
+
+
+        <!--  </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+
+          </div> -->
+        <!--</form>-->
+
+
+      </div>
+      <div class="modal-footer">
+
+      <a id="change_password_link" onclick="showChPwdForm();" style="cursor: pointer; cursor: hand; display: block">Change password</a>
+
+      <button id="change_password_button"class="btn btn-primary"style="display:none; float:right" onclick="ch_pwd();">Save</button>
+
+      </div>
+    </div>
+  </div>
+</div>

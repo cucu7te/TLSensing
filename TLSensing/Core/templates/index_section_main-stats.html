@@ -1,0 +1,43 @@
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    //ajaxRequest("GET", "/data/main_stats", {}, "#motestable");
+    var ws4redis = WS4Redis({
+      uri: '{{ WEBSOCKET_URI }}avs_update?subscribe-broadcast',
+      receive_message: avs_update_handle,
+      heartbeat_msg: {{ WS4REDIS_HEARTBEAT }},
+    });
+    var ws4redis_avo = WS4Redis({
+      uri: '{{ WEBSOCKET_URI }}avo_update?subscribe-broadcast',
+      receive_message: avo_update_handle,
+      heartbeat_msg: {{ WS4REDIS_HEARTBEAT }},
+    });
+    var ws4redis_avo_progress = WS4Redis({
+      uri: '{{ WEBSOCKET_URI }}avo_progress_update?subscribe-broadcast',
+      receive_message: avo_update_handle,
+      heartbeat_msg: {{ WS4REDIS_HEARTBEAT }},
+    });
+    var ws4redis_avo_errors = WS4Redis({
+      uri: '{{ WEBSOCKET_URI }}avo_progress_error_update?subscribe-broadcast',
+      receive_message: avo_errors_handle,
+      heartbeat_msg: {{ WS4REDIS_HEARTBEAT }},
+    });
+  });
+</script>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <span id="next_acquisition"></span>
+    <span id="last_acquisition"></span>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-right">
+          {% for mote in motecount %}
+          <h3>Number of {{ motecount | get_item:mote | get_item:"label" }} type motes: {{ motecount | get_item:mote | get_item:"count" | default_if_none:"0"}}</h3>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div id="motestable">
+      {{ main_stats }}
+    </div>
+  </div>
+</div>

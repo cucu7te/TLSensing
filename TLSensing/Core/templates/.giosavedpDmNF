@@ -1,0 +1,203 @@
+{% load app_filters %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TLSensing</title>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    
+    <!-- Login -->
+    <script src="{{ STATIC_URL }}js/admin_login.js"></script>
+    
+    <script type="text/javascript"> 
+if(isLogged()==true){
+  document.getElementById("set_thresh").style.display="block";
+}
+else{
+  document.getElementById("set_thresh").style.display="none";} </script> 
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+
+    <!-- JS Common functions -->
+    <script type='text/javascript' src='{{ STATIC_URL }}js/script_mg.js'></script>
+
+    <!-- WS4Redis -->
+    <script type='text/javascript' src='{{ STATIC_URL }}js/ws4redis.js'></script>
+
+    <!-- Toast Notifications -->
+    <link href="{{ STATIC_URL }}css/toastr.css" rel="stylesheet"/>
+    <script src="{{ STATIC_URL }}js/toastr.js"></script>
+
+    <!-- Topology libs -->
+    <script src="{{ STATIC_URL }}js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{ STATIC_URL }}js/dagre-d3.js"></script>
+    <link href="{{ STATIC_URL }}css/d3.css" rel="stylesheet"/>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tipsy.js"></script>
+    <link href="{{ STATIC_URL }}css/tipsy.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+      var avo_started = false
+      var ws4redis = undefined
+      var ws4redis_avo = undefined
+      var ws4redis_avo_progress = undefined
+      var ws4redis_avo_errors = undefined
+      var ws4redis_not = WS4Redis({
+        uri: '{{ WEBSOCKET_URI }}notifications?subscribe-broadcast',
+        receive_message: notifications_handle,
+        heartbeat_msg: {{ WS4REDIS_HEARTBEAT }},
+      });
+
+      function avo_errors_handle(msg) {
+        console.log("REDIS avo_errors: " + msg);
+        json = $.parseJSON(msg);
+        if(json.errors != null) {
+          $("#avo-errors").html(json.errors);
+        }
+      }
+
+      function avo_update_handle(msg) {
+        console.log("REDIS avo_update: " + msg);
+        json = $.parseJSON(msg);
+        if(json.status != null) {
+          if(json.status == "started") {
+            avo_started = true
+            setControlsStatus(false);
+            toastr.options = {
+              "closeButton": true,
+              "debug": false,
+              "newestOnTop": false,
+              "progressBar": false,
+              "positionClass": "toast-bottom-full-width",
+              "preventDuplicates": true,
+              "onclick": null,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": 0,
+              "extendedTimeOut": 0,
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut",
+              "tapToDismiss": false
+            }
+            toastr["info"]("<div class='progress' style='position: relative;'><div class='progress-bar pbar-content' role='progressbar' style='width:0%'><span class='progress_label' style='position: absolute; display: block; width: 100%; color: black; text-shadow: 0px 0px 5px rgba(255,255,255, 1);'></span></div></div><div class='row'><div class='col-md-12'><div id='avo-errors'></div></div></div>")
+          }
+          if(json.status == "stopped") {
+            $("#last_acquisition").html("<div class='alert alert-" + json.pbar_class + "' role='alert'><b>Last acquisition report</b> " + json.pbar_msg + "</div>");
+            setProgressVisible(false, json);
+            if(avo_started == true) {
+              ajaxRequest("GET", "/section/main-stats/", {}, "#main-stats");
+              {% for mote in motes %}
+              ajaxRequest("GET", "/section/mote-panel/{{ mote.id }}", {}, "#mote-panel-{{ mote.id }}");
+              {% endfor %}
+              avo_started = false
+            }
+          }
+        }
+        if(json.pbar_msg != null) {
+          if(avo_started == true) {
+            setControlsStatus(false);
+            setProgressBarStatus(json.pbar_value, json.pbar_msg);
+          }
+        }
+      }
+
+      function avs_update_handle(msg) {
+        console.log("REDIS avs_update: " + msg);
+        json = $.parseJSON(msg);
+
+        if(json.avs != null) {
+          $("#next_acquisition").html("");
+        }
+        if(json.next_acquisition != null) {
+          $("#next_acquisition").html("<div class='alert alert-info' role='alert'>Next acquisition scheduled at <b>" + json.next_acquisition + "</b></div>");
+        }
+      }
+
+      jQuery(document).ready(function($) {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+
+        $('#top-link-block').removeClass('hidden').affix({
+            // how far to scroll down before link "slides" into view
+            offset: {top:100}
+        });
+
+        ajaxRequest("GET", "/section/main-stats/", {}, "#main-stats");
+        {% for mote in motes %}
+        ajaxRequest("GET", "/section/mote-panel/{{ mote.id }}", {}, "#mote-panel-{{ mote.id }}");
+        {% endfor %}
+
+        //Redis connection
+
+      });
+    </script>
+  </head>
+  <body onload="checkCookie()">
+    <!-- Logos -->
+    <div class="text-center" id="logos">
+      <img width="25%" height="25%" src="{{ STATIC_URL }}images/logo.png" alt="TLSensing Logo" />
+      <img width="25%" height="25%" src="{{ STATIC_URL }}images/logo_telematics.png" alt="Telematics Logo" />
+    </div>
+
+    <!-- Redis Alert -->
+    {% if processinfo.post == False %}
+    <div class="alert alert-danger" role="alert"><b>{{ processinfo.bold }}</b> {{ processinfo.msg }}</div>
+    {% else %}
+
+    <!-- Navbar -->
+    {% include "index_navbar.html" %}
+    <div id="index" class="container">
+      <!-- Page content -->
+      {% if motes %}
+
+      <!-- Topology Modal -->
+      {% include "index_modals_topology.html" %}
+
+      <!-- Login Modal -->
+      {% include "index_login.html" %}
+
+
+      <!-- Main Stats -->
+      <div id="main-stats"></div>
+
+      {% for mote in motes %}
+      <div id="mote-panel-{{ mote.id }}"></div>
+      {% endfor %}
+
+      {% else %}
+      <div class="text-center">
+        <h2><strong>No motes found</strong></h2>
+        <h3>Please add a mote using the Administration Panel</h3>
+      </div>
+      {% endif %}
+      {% endif %}
+
+    <span id="top-link-block" class="hidden">
+        <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+            <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+        </a>
+    </span>
+  </body>
+</html>

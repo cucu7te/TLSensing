@@ -1,0 +1,116 @@
+{% load app_filters %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TLSensing Administration Panel</title>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/dashboard.css">
+
+    <!-- JS Common functions -->
+    <script type='text/javascript' src='{{ STATIC_URL }}js/script_mg.js'></script>
+
+    <!-- Toast Notifications -->
+    <link href="{{ STATIC_URL }}css/toastr.css" rel="stylesheet"/>
+    <script src="{{ STATIC_URL }}js/toastr.js"></script>
+
+    <!-- Login -->
+    <script src="{{ STATIC_URL }}js/admin_login.js"></script>
+    
+
+    <script type="text/javascript">
+        function reloadProcessesTable() {
+            ajaxRequest("GET", "/ajax/admin/supervisor/", {}, "#content", {}, false);
+        }
+
+        function reloadMotesTable() {
+            ajaxRequest("GET", "/ajax/admin/motes/", {}, "#motes");
+        }
+
+        function reloadSettingsTable() {
+            ajaxRequest("GET", "/ajax/admin/settings/", {}, "#settings");
+        }
+
+      function loadPage(page) {
+        ajaxRequest("GET", "/ajax/admin/" + page + "/", {}, "#content", function() {
+          $("#sidebar-links li").parent().find('li').removeClass("active");
+          $("#" + page + "-li").addClass("active");
+        }, true);
+      }
+
+      $(document).ready(function () {
+        loadPage("supervisor");
+      });
+    </script>
+  </head>
+  <body onload="guard_admin()">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Logos -->
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/" id="back_btn">Back to TLSensing</a></li>
+          </ul>
+          <ul class="nav nav-sidebar" id="sidebar-links">
+            <li id="supervisor-li"><a href="#" id="supervisor-a" onclick="loadPage('supervisor')">Supervisor</a></li>
+            <li id="motes-li"><a href="#" id="motes-a" onclick="loadPage('motes')">Mote Management</a></li>
+            <li id="settings-li"><a href="#" id="settings-a" onclick="loadPage('settings')">Settings</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="text-center">
+            <img width="25%" height="25%" src="{{ STATIC_URL }}images/logo.png" alt="TLSensing Logo" />
+            <img width="25%" height="25%" src="{{ STATIC_URL }}images/logo_telematics.png" alt="Telematics Logo" />
+          </div>
+          <br/>
+          <nav class="navbar navbar-default" id="minibar">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Administration Panel</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#" onclick="loadPage('supervisor')">Supervisor</a></li>
+                  <li><a href="#" onclick="loadPage('motes')">Mote Management</a></li>
+                  <li><a href="#" onclick="loadPage('settings')">Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/">Back to TLSensing</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+          <div id="content"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

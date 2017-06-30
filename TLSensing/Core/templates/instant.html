@@ -1,0 +1,11 @@
+<div><h3><b>Updated at</b>: {% now "jS F Y H:i" %}</h4></div>
+<div><h5 style="font-size: 16px !important"><b>Temperature</b>: {{result.temperature}}</h5></div>
+<div><h5 style="font-size: 16px !important"><b>Humidity</b>: {{result.humidity}}</h5></div>
+<div><h5 style="font-size: 16px !important"><b>Light</b>: {{result.light}}</h5></div>
+{% if mote.mote_type == "OpenMote" %}
+	<div><h5 style="font-size: 16px !important"><b>Accel X</b>: {{result.accel_x}}</h5></div>
+	<div><h5 style="font-size: 16px !important"><b>Accel Y</b>: {{result.accel_y}}</h5></div>
+	<div><h5 style="font-size: 16px !important"><b>Accel Z</b>: {{result.accel_z}}</h5></div>
+
+{% endif %}
+

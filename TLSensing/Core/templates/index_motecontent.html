@@ -1,0 +1,58 @@
+{% include 'index_modals_motes.html' %}
+<a name="{{ mote.id }}"></a>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      {% if mote.mote_type == "OpenMote" %}
+        <img width="8%" height="8%" style="margin-left:3%; margin-top:0%; margin-bottom:0% " float="right" src="{{ STATIC_URL }}images/openmote.png" />
+      {% else %}
+        <img width="8%" height="8%" style="margin-left:3%; margin-top:0%; margin-bottom:0%" float="right" src="{{ STATIC_URL }}images/telosb2.png" />
+      {% endif %}
+       {{ mote.alias_name }}
+     </h3>
+  </div>
+  <div class="panel-body">
+    <!-- Availability -->
+    <div id="availability-{{mote.id}}"></div>
+    
+    <!-- Internal navbar -->
+    {% include "index_motecontent_navbar.html" %}
+      <div class="row">
+        <div class="col-md-5 col-lg-4">
+          <dl class="dl-horizontal">
+            <dt>IPv6</dt>
+            <dd>{{ mote.ipv6 }}</dd>
+            <dt>Added on</dt>
+            <dd>{{ mote.id.generation_time }}</dd>
+            <dt>Mote Type</dt>
+            <dd>{{ mote.mote_type }}</dd>
+          </dl>
+          <h4>Most recent values</h4>
+          <div id="mrv-{{mote.id}}">
+            {{ mrv }}
+          </div>
+        </div>
+        
+        <div class="col-md-7 col-lg-8">
+          {% if mote.measures %}
+          {% for accordion in accordions %}
+            {% if mote.mote_type in accordion.mote_types %}
+            <div class="panel panel-primary" id="accordion-{{accordion.name}}-{{mote.id}}">
+              <div class="panel-heading">
+                <div class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{accordion.name}}-{{mote.id}}" href="#collapse-{{accordion.name}}-{{mote.id}}" style="display: block;">{{ accordion.label }}</a>
+                </div>
+              </div>
+              <div id="collapse-{{accordion.name}}-{{mote.id}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                  {{ mote.alias_name }}
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>

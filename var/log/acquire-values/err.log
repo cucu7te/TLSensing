@@ -1,0 +1,1093 @@
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 377, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 238, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 41, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/management/commands/acquire_values_oneshot.py", line 20, in <module>
+    from Core.motes import motes
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/motes/motes.py", line 325
+    if "&" is in query:
+               ^
+SyntaxError: invalid syntax
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:1357: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 352, in _receive
+    self.socketUdp.sendUdp(
+AttributeError: 'coap' object has no attribute 'socketUdp'
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 377, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 238, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 41, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/management/commands/acquire_values_oneshot.py", line 20, in <module>
+    from Core.motes import motes
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/motes/motes.py", line 381
+    sensordata.accel_x *= 3.9
+             ^
+IndentationError: expected an indented block
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 377, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 238, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 41, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/management/commands/acquire_values_oneshot.py", line 20, in <module>
+    from Core.motes import motes
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/motes/motes.py", line 381
+    sensordata.accel_x *= 3.9
+             ^
+IndentationError: expected an indented block
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 377, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 238, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 41, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/management/commands/acquire_values_oneshot.py", line 20, in <module>
+    from Core.motes import motes
+  File "/home/tlsensing/TLSEnv/TLSensing/Core/motes/motes.py", line 381
+    sensordata.accel_x *= 3.9
+             ^
+IndentationError: expected an indented block
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 352, in _receive
+    self.socketUdp.sendUdp(
+AttributeError: 'coap' object has no attribute 'socketUdp'
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/axes/_axes.py:531: UserWarning: No labelled objects found. Use label='...' kwarg on individual plots.
+  warnings.warn("No labelled objects found. "
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+Exception in thread socketUdpRead@:5683:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 100, in run
+    self.callback(timestamp,source,data)
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/coap.py", line 355, in _receive
+    msg              = response,
+  File "/home/tlsensing/TLSEnv/TLSensing/coap/coap/socketUdpReal.py", line 57, in sendUdp
+    self.socket_handler.sendto(msg,(destIp,destPort))
+error: [Errno 101] Network is unreachable
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+
+/home/tlsensing/TLSEnv/local/lib/python2.7/site-packages/matplotlib/__init__.py:878: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
+  warnings.warn(self.msg_depr % (key, alt_key))
+

@@ -1,0 +1,56 @@
+<script type='text/javascript' src="{{ STATIC_URL }}js/script_mg.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#savesettings").on('click', function() {
+            var values = {}
+            {% for setting in data %}
+            values.{{ setting }} = $(".{{ setting }}_value").val();
+            {% endfor %}
+            ajaxRequest("POST", "/admin/settings/save", values, "#content");
+        });
+
+        {% for setting in data %}
+        $(".{{ setting }}_reset").on('click', function() {
+            $(".{{ setting }}_value").val($(".{{ setting }}_value").attr("placeholder"));
+        });
+        {% endfor %}
+
+        {% if result.message %}
+        toastr["{{ result.status }}"]("{{ result.message }}")
+        {% endif %}
+    });
+</script>
+
+<!--
+<h2>Action Result: {{ result.status }}</h2>
+<h2>Action Result String: {{ result.message }}</h2>
+-->
+{% if data %}
+<div id="settings">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Settings</h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-responsive">
+                    <tbody>
+                        {% for setting in data %}
+                        <tr>
+                            <th>{{ data|get_item:setting|get_item:"human_name" }}</th>
+                            <th><input type="text" class="{{ setting }}_value form-control" placeholder="{{ data|get_item:setting|get_item:"default_value" }}" value="{{ data|get_item:setting|get_item:"value" }}"></input></th>
+                            <th><button type="button" class="{{ setting }}_reset btn btn-primary">Reset</button></th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="text-right">
+                <button type="button" id="savesettings" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

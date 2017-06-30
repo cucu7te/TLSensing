@@ -1,0 +1,77 @@
+{% load app_filters %}
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    ajaxRequest("GET", "/data/thresholds/{{mote.id}}", {}, "#m-thresholds-{{mote.id}}");
+
+    $("#poll-all-{{mote.id}}").change(function() {
+      var types = ["T", "H", "L", "A"];
+      if(this.checked) {
+        state = true;
+      } else {
+        state = false;
+      }
+      types.forEach(function(t) {
+        $("#poll-" + t + "-{{mote.id}}").prop('checked', state);
+        $("#poll-" + t + "-{{mote.id}}").prop('disabled', state);
+      });
+    });
+
+    $("#btn-poll-{{mote.id}}").click(function() {
+      var measures = [];
+      var types = ["T", "H", "L", "A"];
+      var selected = $("#measures-checks-{{mote.id}} input:checked").map(function(i,el){
+        str = el.id.substring(5).replace("{{mote.id}}","");
+        return str.substring(0, str.length - 1);
+      }).get();
+      if(selected.length == 0) {
+        alert("Choose at least one measure");
+      } else {
+        $('#poll-{{mote.id}}').modal('hide');
+        ajaxRequest("POST", "/data/poll/{{mote.id}}", {"sensor": selected}, "#wtf-{{mote.id}}");
+      }
+    });
+  });
+</script>
+
+<!-- Poll now -->
+<div class="modal fade" id="poll-{{mote.id}}" tabindex="-1" role="dialog" aria-labelledby="modal-poll-{{mote.id}}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modal-poll-{{mote.id}}">
+          Refresh sensor values for mote {{mote.alias_name}}
+        </h4>
+      </div>
+      <div class="modal-body">
+      <div class="wtf-{{mote.id}}"></div>
+        <form class="form-horizontal" id="form-poll-{{mote.id}}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="sel-{{mote.id}}" class="col-sm-4 control-label">Choose what sensor values you want to read</label>
+            <div class="col-sm-8">
+              <div class="checkbox">
+                <label><input type="checkbox" id="poll-all-{{mote.id}}" value="">All</input></label>
+              </div>
+              <div id="measures-checks-{{mote.id}}">
+                {% for cq, cqcontent in coap_queries.items %}
+                {% if mote.mote_type in cqcontent.mote_types %}
+                <div class="checkbox">
+                  <label><input type="checkbox" id="poll-{{ cq }}-{{mote.id}}" value="">{{ cqcontent.label }}</input></label>
+                </div>
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary poll-link" id="btn-poll-{{mote.id}}">Poll now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Set tresholds -->
+<div id="m-thresholds-{{mote.id}}"></div>

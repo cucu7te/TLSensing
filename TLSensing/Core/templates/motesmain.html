@@ -1,0 +1,202 @@
+<script type='text/javascript' src="{{ STATIC_URL }}js/jquery-1.10.2.js"></script>
+<script type='text/javascript' src="{{ STATIC_URL }}js/script_mg.js"></script>
+<script type="text/javascript">
+    function reloadTable() {
+        ajaxRequest("GET", "{% url 'motestable' %}", {}, "#motestable");
+    }
+    $(document).ready(function () {
+        reloadTable();
+    });
+</script>
+
+<div style="margin:5%" align="center">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1><b>Number of motes in the testbed: {{ motecount.all }}</b></h1>
+            <h3>No. of TelosB Motes: {{ motecount.TelosB }}</h3>
+            <h3>No. of OpenMote Motes: {{ motecount.OpenMote }}</h3>
+            <h2>Next scheduled value acquisition: <span id="next_acquisition" /></h2>
+            <div id="motestable"></div>
+        </div>
+    </div>
+
+    {% for mote in motes %}
+    <a name="{{ mote.alias_name }}" />
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+    <div class="panel-heading"><h3>
+        {% if mote.mote_type == "OpenMote" %}
+          <img width="8%" height="8%" style="margin-left:3%; margin-top:0%; margin-bottom:0% " float="right" src="{{ STATIC_URL }}images/openmote.png" />
+        {% else %}
+          <img width="8%" height="8%" style="margin-left:3%; margin-top:0%; margin-bottom:0%" float="right" src="{{ STATIC_URL }}images/telosb2.png" />
+        {% endif %}
+         {{ mote.alias_name }}</h3>
+    </div>
+      <div class="panel-body">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#{{ mote.alias_name }}-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Actions</a>
+            </div>
+            <div class="collapse navbar-collapse" id="{{ mote.alias_name }}-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#{{ mote.alias_name }}">Set tresholds</a></li>
+                    <li id="poll-{{mote.id}}"><a href="#{{ mote.alias_name }}" data-toggle="modal" data-target="#myModal-instant-{{mote.id}}">Poll now</a></li>
+                    <li><a href="#{{ mote.alias_name }}">Resource discovery</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#{{ mote.alias_name }}">Up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<div class="modal fade" id="myModal-instant-{{mote.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Refresh sensor values</h4>
+        </div>
+        <div class="modal-body">
+            <form id="instant-values-{{mote.id}}" class="form col-md-12 center-block">
+              {% csrf_token %}
+                <div class="form-group">
+                  <label for="sel1">Choose what sensor values you want to read</label>
+                  <select class="form-control" id="sel1" name="sensor" style="margin-bottom:10px">
+                    <option value="">All</option>
+                    <option value="T">Temperature</option>
+                    <option value="H">Humidity values</option>
+                    <option value="L">Light values</option>
+                    
+                    {% if mote.mote_type == "OpenMote" %}  
+                      <option value="A">Accelerometer values</option>
+                    {% endif%}
+
+                  </select>
+                  <div class="form-group" align="right">  
+                    <button class="btn btn-primary btn-lg btn-block">Poll</button>
+                  </div>
+                </div>
+            </form>
+            <div id="instant-response-{{mote.id}}" />
+        </div>
+      </div>
+  </div>
+</div>
+
+
+        <div class="row">
+            <div class="col-md-5 col-sm-5">
+                <dl class="dl-horizontal">
+                    <dt>IPv6</dt>
+                    <dd>{{ mote.ipv6 }}</dd>
+                    <dt>Added on</dt>
+                    <dd>{{ mote.id.generation_time }}</dd>
+                    <dt>Mote Type</dt>
+                    <dd>{{ mote.mote_type }}</dd>
+                </dl>
+                <h4>Most recent values</h4>
+                <dl class="dl-horizontal">
+                    <dt>Date</dt>
+                    <dd>...</dd>
+                    <dt>Temperature</dt>
+                    <dd>...</dd>
+                    <dt>Relative Humidity</dt>
+                    <dd>...</dd>
+                    <dt>for cycle here...</dt>
+                    <dd>...</dd>
+                </dl>
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <div class="panel panel-primary" id="accordion-history-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-history-{{mote.id}}" href="#collapse-history-{{mote.id}}" style="display: block;">History</a>
+                        </div>
+                    </div>
+                    <div id="collapse-history-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary" id="accordion-info-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-info-{{mote.id}}" href="#collapse-info-{{mote.id}}" style="display: block;">Stats</a>
+                        </div>
+                    </div>
+                    <div id="collapse-info-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-primary" id="accordion-notifications-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-notifications-{{mote.id}}" href="#collapse-notifications-{{mote.id}}" style="display: block;">Notifications</a>
+                        </div>
+                    </div>
+                    <div id="collapse-notifications-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary" id="accordion-graphs-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-graphs-{{mote.id}}" href="#collapse-graphs-{{mote.id}}" style="display: block;">Main Graphs</a>
+                        </div>
+                    </div>
+                    <div id="collapse-graphs-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+
+                {% if mote.mote_type == "OpenMote" %}
+                <div class="panel panel-primary" id="accordion-acc-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-acc-{{mote.id}}" href="#collapse-acc-{{mote.id}}" style="display: block;">Accelerometer 3D scatter plot</a>
+                        </div>
+                    </div>
+                    <div id="collapse-acc-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary" id="accordion-acc-details-{{mote.id}}">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-acc-details-{{mote.id}}" href="#collapse-acc-details-{{mote.id}}" style="display: block;">Accelerometer graphs</a>
+                        </div>
+                    </div>
+                    <div id="collapse-acc-details-{{mote.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            The Game
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
